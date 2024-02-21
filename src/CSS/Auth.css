@@ -1,0 +1,108 @@
+.signup-page {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fb;
+}
+
+.auth-box {
+  width: 700px;
+  display: flex;
+  box-shadow: 0 2px 8px 0 rgba(99, 99, 99, 0.2);
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.auth-box .leftside {
+  flex: 1.5;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .signup-page .auth-box {
+    width: 70%;
+  }
+
+  .auth-box .leftside {
+    display: none;
+  }
+
+  .auth-box .rightside {
+    flex: 1;
+  }
+}
+
+@media (max-width: 540px) {
+  .signup-page {
+    background-color: #ffffff;
+    align-items: flex-start;
+  }
+
+  .signup-page .auth-box {
+    width: 100%;
+    box-shadow: none;
+  }
+}
+
+.leftside img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.auth-box .rightside {
+  flex: 2.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightside .logo {
+  width: 100px;
+  height: auto;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.register-your-profile{
+  text-align: center;
+  letter-spacing: 0.09em;
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+.register-your-profile span{
+  color: #db0606;
+}
+
+.custom-form {
+  width: 100%;
+  padding: 15px;
+}
+
+.custom-form .submit-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.submit-div p a {
+  color: #db0606;
+}
+
+.submit-div .submit-btn {
+  background-color: #db0606;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px 14px;
+  border-radius: 3px;
+  cursor: pointer;
+}

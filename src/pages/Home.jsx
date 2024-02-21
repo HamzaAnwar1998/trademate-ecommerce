@@ -5,14 +5,16 @@ import Navbar from "../components/Navbar";
 import About from "../components/About";
 import Products from "../components/Products";
 import Footer from "../components/Footer";
+import { getCurrentUser } from "../store/slices/user/UserSlice";
 
 const Home = () => {
   // dispatch
   const dispatch = useDispatch();
 
-  // get products
+  // get products and get user
   useEffect(() => {
     dispatch(getProducts());
+    dispatch(getCurrentUser());
   }, [dispatch]);
 
   return (
