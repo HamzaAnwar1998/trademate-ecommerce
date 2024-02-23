@@ -67,7 +67,7 @@ const Navbar = () => {
               <span className="items-indicator">2</span>
             </NavLink>
           </div>
-          {userData ? (
+          {userData && userData.displayName ? (
             <div className="relative-div" ref={dropdownRef}>
               <button
                 type="button"
