@@ -73,20 +73,20 @@ const Register = () => {
               })
               .catch((err) => {
                 setError(
-                  `Login Error: ${err.message}. Please try a manual login.`
+                  `Login Error: ${err.message} Please try a manual login.`
                 );
               })
               .finally(() => setLoading(false));
           })
           .catch((err) => {
             setError(
-              `Display Name Update Error: ${err.message}. Please try a manual login and update your display name from the profile page.`
+              `Display Name Update Error: ${err.message} Please try a manual login and update your display name from the profile page.`
             );
             setLoading(false);
           });
       })
       .catch((err) => {
-        setError(`Registration Error: ${err.message}.`);
+        setError(`Registration Error: ${err.message}`);
         setLoading(false);
       });
   };

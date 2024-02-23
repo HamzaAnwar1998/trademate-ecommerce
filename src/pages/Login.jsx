@@ -60,7 +60,7 @@ const Login = () => {
         navigate("/");
       })
       .catch((err) => {
-        setError(`Login Error: ${err.message}. Please try a manual login.`);
+        setError(`Login Error: ${err.message} Please try a manual login.`);
       })
       .finally(() => setLoading(false));
   };
