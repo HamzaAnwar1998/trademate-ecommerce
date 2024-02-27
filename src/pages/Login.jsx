@@ -65,6 +65,13 @@ const Login = () => {
       .finally(() => setLoading(false));
   };
 
+  // handle link click
+  const handleLinkClick = (e) => {
+    if (loading) {
+      e.preventDefault();
+    }
+  };
+
   return (
     <div className="signup-page">
       <div className="auth-box">
@@ -104,9 +111,12 @@ const Login = () => {
             {error && <div className="error-msg">{error}</div>}
             <div className="submit-div">
               <p>
-                Don&apos; have an account? <Link to="/register">Register</Link>
+                Don&apos; have an account?{" "}
+                <Link to="/register" onClick={handleLinkClick}>
+                  Register
+                </Link>
               </p>
-              <button type="submit" className="submit-btn">
+              <button type="submit" className="submit-btn" disabled={loading}>
                 {loading ? "..." : "Login"}
               </button>
             </div>

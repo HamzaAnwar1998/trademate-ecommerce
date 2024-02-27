@@ -91,6 +91,13 @@ const Register = () => {
       });
   };
 
+  // handle link click
+  const handleLinkClick = (e) => {
+    if (loading) {
+      e.preventDefault();
+    }
+  };
+
   return (
     <div className="signup-page">
       <div className="auth-box">
@@ -141,9 +148,12 @@ const Register = () => {
             {error && <div className="error-msg">{error}</div>}
             <div className="submit-div">
               <p>
-                Already have an account? <Link to="/login">Login</Link>
+                Already have an account?{" "}
+                <Link to="/login" onClick={handleLinkClick}>
+                  Login
+                </Link>
               </p>
-              <button type="submit" className="submit-btn">
+              <button type="submit" className="submit-btn" disabled={loading}>
                 {loading ? "..." : "Register"}
               </button>
             </div>
